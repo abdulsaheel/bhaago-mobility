@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 100% 97%;
+    --foreground: 345 45% 20%;
+
+    --card: 24 100% 91%;
+    --card-foreground: 345 45% 20%;
+
+    --popover: 36 100% 97%;
+    --popover-foreground: 345 45% 20%;
+
+    --primary: 12 100% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 24 100% 91%;
+    --secondary-foreground: 345 45% 20%;
+
+    --muted: 24 100% 91%;
+    --muted-foreground: 345 45% 40%;
+
+    --accent: 24 100% 91%;
+    --accent-foreground: 345 45% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 24 100% 91%;
+    --input: 24 100% 91%;
+    --ring: 12 100% 52%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.font-georama {
+  font-family: "Georama", sans-serif;
+}
+
+.font-ar-one {
+  font-family: "AR One Sans", sans-serif;
+}
+
