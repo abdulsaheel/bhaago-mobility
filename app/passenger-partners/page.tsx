@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import '../globals.css'
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -10,14 +11,14 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <main className="flex-grow bg-[#fee1b2] px-6 md:px-12 py-12 pt-24 md:pt-32 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <main className="flex-grow bg-[#fee1b2] px-4 sm:px-6 md:px-12 py-12 pt-24 md:pt-32 relative overflow-hidden">
+        <div className="max-w-full sm:max-w-2xl md:max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="z-10">
+          <div className="z-10 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-bold text-[#6b0606] leading-tight">
-              <div className="flex items-center whitespace-nowrap">
+              <div className="sm:block md:flex items-center md:whitespace-nowrap">
                 <span><strong>More </strong> Rides.</span>
-                <span className="ml-4">Lower Costs.</span>
+                <span className="md:ml-4">Lower Costs.</span>
               </div>
               <span>Happier Cities.</span>
             </h1>
@@ -28,24 +29,24 @@ export default function Home() {
               The city moves better with <span className="font-semibold">Bhago</span>.
             </p>
             
-            <ul className="mt-8 space-y-2 text-[#390303]">
-              <li className="flex items-start">
+            <ul className="mt-8 space-y-2 text-[#390303] text-left md:text-left">
+              <li className="flex items-start justify-center md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span>Dependable EV fleet with <span className="font-semibold">24/7 availability</span></span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start justify-center md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Lower cost-per-km</span> than traditional autos</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start justify-center md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span>Optimized for <span className="font-semibold">ride-sharing</span> & urban commutes</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start justify-center md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Higher uptime</span> = More rides, better margins</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start justify-center md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span>Supports government <span className="font-semibold">smart city initiatives</span></span>
               </li>
@@ -64,15 +65,15 @@ export default function Home() {
           </div>
           
           {/* Image */}
-            <div className="relative w-full h-[400px] md:h-[500px]">
-              <Image
-                src="/passenger-partner.png"
-                alt="Bhago EV with passenger"
-                fill
-                className="object-contain scale-125"
-                priority
-              />
-            </div>
+          <div className="relative w-full h-[400px] md:h-[500px] flex justify-center">
+            <Image
+              src="/passenger-partner.png"
+              alt="Bhago EV with passenger"
+              fill
+              className="object-contain sm:scale-100 md:scale-125"
+              priority
+            />
+          </div>
         </div>
       </main>
       

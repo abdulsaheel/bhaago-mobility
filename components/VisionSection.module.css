@@ -66,4 +66,48 @@
   }
   
 
+  /* Mobile View (Up to 768px) */
+@media (max-width: 768px) {
+  .visionSection {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .banner {
+    padding: 10px 0;
+  }
+
+  .heading {
+    font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  .contentContainer {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .highlight {
+    font-size: 1.4rem;
+  }
+
+  .VerticalGap {
+    height: 30px; /* Adjust vertical spacing */
+  }
+}
+
+
   

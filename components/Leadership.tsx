@@ -30,12 +30,11 @@ const LeadershipTeam = () => {
   ];
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-4">
       <h2 className="text-3xl font-bold text-stone-800 text-center mb-6">Team</h2>
-      <div className="flex justify-center space-x-4">
+      <div className="flex flex-wrap justify-center gap-4 md:space-x-4">
         {leaders.map((leader, index) => (
-          <div key={index} className="w-52">
-            {/* Image with reduced border radius and fixed dimensions */}
+          <div key={index} className="w-full sm:w-52 flex flex-col items-center">
             <div className="w-48 h-64 mb-4 overflow-hidden rounded-lg bg-[#E9592A] flex items-end">
               <img 
                 src={leader.image} 
@@ -43,8 +42,6 @@ const LeadershipTeam = () => {
                 className="w-full object-contain"
               />
             </div>
-            
-            {/* Center-aligned name and title */}
             <div className="text-center">
               <h3 className="text-xl font-bold text-stone-800 mb-1">{leader.name}</h3>
               <p className="text-lg text-stone-700">{leader.position}</p>

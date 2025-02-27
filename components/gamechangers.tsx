@@ -7,8 +7,8 @@ import Image from "next/image"
 export default function Gamechangers() {
   const animationsEnabled = true
   const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true
+    threshold: 0.2,  // Trigger when 20% of section is visible
+    triggerOnce: true // Only play once per page load
   })
 
   const cardVariants = {
@@ -29,7 +29,7 @@ export default function Gamechangers() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-white p-4 md:p-8 overflow-x-hidden">
+    <div ref={ref} className="w-full min-h-screen bg-white p-4 md:p-8 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 relative text-[#390303]">
@@ -37,8 +37,8 @@ export default function Gamechangers() {
           </h1>
         </div>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
             {
               title: "Creating\n**Driverpreneurs**:",
               bg: "#FF5C00",
@@ -63,26 +63,25 @@ export default function Gamechangers() {
               imageUrl: "/gamechangers/tech-led.png",
               description: "Smart fleets need smart systems. Our in-house tech optimizes for fleet efficiency and tracks real-time performance, so our driverpreneurs get the ratings they deserve. Better ratings, higher earnings, and a thriving ecosystem where hustle gets rewarded."
             }
-            ].map((card, index) => (
+          ].map((card, index) => (
             <motion.div
               key={index}
               custom={index}
               variants={cardVariants}
-              initial={animationsEnabled ? "hidden" : "visible"}
-              animate={inView && animationsEnabled ? "visible" : "visible"}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"} // Trigger only when section is in view
               className={`rounded-3xl overflow-hidden flex flex-col justify-between h-full`}
               style={{ backgroundColor: card.bg }}
             >
-                <div className="relative h-66 md:h-64">
+              <div className="relative h-66 md:h-64">
                 <Image 
                   src={card.imageUrl} 
                   height={300}
                   width={310}
                   alt={`Illustration for ${card.title}`}
                 />
-                </div>
+              </div>
               <div className="mt-4 flex flex-col flex-grow p-6">
-                {/* Fixed height for title container */}
                 <div className="min-h-[120px] flex items-start">
                   <h2 className="text-white text-2xl md:text-3xl leading-tight whitespace-pre-line">
                     {card.title.split('**').map((part, i) => 
@@ -95,7 +94,7 @@ export default function Gamechangers() {
                 </p>
               </div>
             </motion.div>
-            ))}
+          ))}
         </div>
       </div>
     </div>
