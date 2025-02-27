@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import FeatureButtons from "./FeatureButtons";
-export default function Hero() {
+import FeatureButtons from "./FeatureButtons";export default function Hero() {
   const [rotation, setRotation] = useState(0);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [imageSrc, setImageSrc] = useState("/rickshaw.png"); // Default image
@@ -77,17 +76,19 @@ export default function Hero() {
       </div>
 
       <svg
-        className="absolute bottom-0 left-0 w-screen h-screen"
-        viewBox="0 0 360 360"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
-        <path 
-          fill="#FFF8F3" 
-          d="M360,148 C240,360 120,316 0,316 L0,360 L360,360 Z" 
-        />
-      </svg>
+  className="absolute bottom-0 left-0 w-screen h-screen"
+  viewBox="0 0 360 360"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="none"
+>
+  <path
+    fill="#FFF8F3"
+    d="M360,259 C100,447 120,316 0,360 L0,360 L360,360 Z"
+  />
+</svg>
+
     </section>
   );
 }
+
