@@ -34,13 +34,13 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-4">
-              <a href="#" className="block hover:text-[#FF9966] transition-colors">Passenger Partners</a>
-              <a href="#" className="block hover:text-[#FF9966] transition-colors">Cargo Partners</a>
-              <a href="#" className="block hover:text-[#FF9966] transition-colors">Driver Partners</a>
+              <a href="/passenger-partners" className="block hover:text-[#FF9966] transition-colors">Passenger Partners</a>
+              <a href="/cargo-partners" className="block hover:text-[#FF9966] transition-colors">Cargo Partners</a>
+              <a href="/driver-partners" className="block hover:text-[#FF9966] transition-colors">Driver Partners</a>
             </div>
             <div className="space-y-4">
-              <a href="#" className="block hover:text-[#FF9966] transition-colors">About</a>
-              <a href="#" className="block hover:text-[#FF9966] transition-colors">Hiring Now</a>
+              <a href="/about" className="block hover:text-[#FF9966] transition-colors">About</a>
+              <a href="/hiring" className="block hover:text-[#FF9966] transition-colors">Hiring Now</a>
             </div>
           </div>
         </div>

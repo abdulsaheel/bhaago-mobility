@@ -1,0 +1,69 @@
+/* components/VisionSection.module.css */
+
+.visionSection {
+    width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    background-color: #fdf5ec; /* Light background behind everything */
+  }
+  
+  /* Top banner */
+  .banner {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #fdf5ec; /* or a slightly different shade if you prefer */
+  }
+  
+  .heading {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a4633; /* A darker brown, if desired */
+  }
+  
+  /* Content with background image + overlay */
+  .contentContainer {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    background: url("/pedestrian.png") no-repeat center center;
+    background-size: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(57, 3, 3, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the right */
+    text-align: right; /* Align text to the right */
+    color: #fff;
+    padding: 2rem 4rem; /* Adjust padding for spacing */
+}
+.VerticalGap {
+    height: clamp(40px, 6vh, 60px);
+    background-color: #FEE1B2;
+    width: 100%;
+}
+.title {
+    font-size: 4rem; /* Increase title size */
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem; /* Increase subtitle size */
+    max-width: 600px;
+    line-height: 1.6;
+}
+  
+  .highlight {
+    color: #ff6a00; /* The orange color for "get off the road" */
+  }
+  
+
+  

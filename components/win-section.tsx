@@ -2,7 +2,7 @@
 
 export default function WinWin() {
     return (
-        <section className="relative z-10 container mx-auto px-16 lg:px-24 pb-10 text-[#4A1D1F] overflow-x-hidden">
+        <section className="relative z-10 container mx-auto px-16 lg:px-24 p-10 text-[#4A1D1F] overflow-x-hidden">
             <div className="flex flex-row items-start justify-between gap-30 md:gap-32">
                 <div
                     className="bg-transparent flex-shrink-0"
