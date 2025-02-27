@@ -24,10 +24,19 @@ export default function Navbar() {
         className={`absolute left-[5%] md:left-[5%] flex items-center gap-4 transition-opacity duration-500 ${
           isScrolled ? "opacity-0" : "opacity-100"
         }`}
-        style={{ top: "50%", transform: "translateY(-50%)" }}
+        style={{ top: "50%", transform: "translateY(-50%)", height: "55px" }} // Fixed height
       >
-        <img src="/logo.png" alt="Bhaago Logo" className="h-12 w-12" />
-        <img src="/wordmark.png" alt="Bhaago Wordmark" className="h-12" />
+        {/* Logo */}
+        <div className="flex items-center justify-center h-full">
+          <img
+            src="/bhago logo.png"
+            alt="Bhaago Logo"
+            className="h-36 w-36 object-contain" // Ensure the image scales properly
+          />
+        </div>
+
+        {/* Wordmark */}
+
       </div>
 
       {/* Main Navigation Bar (Dynamically Expanding) */}

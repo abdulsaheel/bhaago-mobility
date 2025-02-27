@@ -22,7 +22,7 @@ export default function Hero() {
     <section className=" w-screen h-screen relative overflow-hidden bg-[#FDE5BF] pb-20 overflow-x-hidden">
       {/* Decorative Background Gradients */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(217,91,0,0.3)_10%,rgba(255,187,12,0)_60%)]" />
+        <div className="absolute inset-0 bg-#FEE1B2" />
       </div>
 
       {/* Decorative Image with Slow Rotation */}
@@ -43,23 +43,19 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Section: Text */}
           <div className="space-y-2 relative">
-            <h1 className="font-nicky-sans text-[120px] font-black leading-[90px] tracking-[-1%] text-[#E4572E] whitespace-nowrap mb-1">
+            <h1 className=" text-[120px] font-black leading-[90px] tracking-[-1%] text-[#FF531A] whitespace-nowrap mb-1">
               Smarter Mobility
             </h1>
-            <h1 className="font-nicky-sans text-[75px] font-black leading-[90px] tracking-[-1%] text-[#E4572E] whitespace-nowrap">
-              For a Better India
+            <h1 className="text-[75px] font-black leading-[90px] tracking-[-1%] text-[#FF531A] whitespace-nowrap">
+              for a Better India
             </h1>
             <div className="h-4"></div>
             <p className="text-3xl text-[#6B0606] max-w-xl relative z-20">
-              <strong>Bhago Moves.</strong> So<strong> You </strong>Can Too
+              <strong>Sustainable Last Mile Transport, Sustainable Livelihoods.
+              </strong>
             </p>
             <p className="text-lg text-[#6B0606] max-w-xl relative z-20">
-              Last-mile transport doesn't have to be slow, expensive, or
-              polluting. Our electric fleet keeps people and packages moving -
-              fast, affordable, and 100% green. Through industry-leading 16 Hour
-              EV uptime & transformational micro entrepreneurship opportunities
-              for our drivers, Bhago makes every move count across passenger
-              mobility & cargo services.
+            Last-mile transport doesn’t have to be unreliable, expensive, or polluting. Our <strong> electric fleet </strong>keeps people and packages moving - <strong> fast, affordable, and green.</strong> By offering disruptive vehicle uptime and <strong>micro-entrepreneurship</strong> opportunities across <strong>passenger & cargo</strong> mobility.
             </p>
           </div>
 

@@ -8,8 +8,6 @@
   }
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,8 +64,6 @@
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -75,5 +71,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Georama", sans-serif;
+  }
+  h1, h2, h3,p {
+    font-family: "Georama", sans-serif;
+  }
+  h4, h5 {
+    font-family: "AR One Sans", sans-serif;
   }
 }

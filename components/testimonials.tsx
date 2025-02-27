@@ -1,6 +1,6 @@
 "use client"; 
 import React, { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import {ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Testimonial data type
 export interface Testimonial {
@@ -67,21 +67,6 @@ const DriverTestimonials: React.FC<DriverTestimonialsProps> = ({
   }, [isAnimating]);
 
   // Function to render stars based on rating
-  const renderStars = (rating: number) => {
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(
-        <Star 
-          key={i} 
-          size={20} 
-          fill={i < rating ? "#FF5722" : "none"} 
-          color="#FF5722" 
-          className="inline-block"
-        />
-      );
-    }
-    return stars;
-  };
 
   // Function to handle dot navigation
   const handleDotClick = (index: number) => {
@@ -180,14 +165,11 @@ const DriverTestimonials: React.FC<DriverTestimonialsProps> = ({
           key={testimonial.id}
           className="bg-[#FFCFB5] rounded-2xl p-6 flex flex-col h-[350px] transition-all duration-500" // Reduced height
               >
-          <div className="text-4xl text-[#3A0F00] font-serif mb-1">"</div>
+            <div className="text-8xl font-georgia text-[#3A0F00] mb-1">"</div>
           <p className="text-[#3A0F00] mb-4">"{testimonial.quote}"</p>
           
           <div className="mt-4"> {/* Reduced margin top */}
-          <div className="flex mb-1">
-            {renderStars(testimonial.rating)}
-            <span className="ml-2 font-bold text-[#3A0F00]">{testimonial.rating}</span>
-          </div>
+
           
           <div className="flex items-center mt-2">
             <img 

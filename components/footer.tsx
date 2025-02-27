@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ className = "" }) => {
   return (
-    <footer className={`bg-[#500000] text-white py-12  ${className}`}>
+    <footer className={`bg-[#390303] text-white py-12  ${className}`}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
               <p className="text-sm mb-1">+91-172-2609902, 2699903</p>
               <a 
                 href="mailto:contactus@bhagomobility.com" 
-                className="inline-block bg-[#3A0F00] text-white text-sm px-3 py-1 rounded-md hover:bg-[#4A1F10] transition-colors"
+                className="inline-block bg-[#FBE4CF] text-[#390303] text-sm px-3 py-1 rounded-md transition-colors"
               >
                 contactus@bhagomobility.com
               </a>
