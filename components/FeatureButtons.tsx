@@ -13,7 +13,6 @@ const FeatureButton: React.FC<FeatureButtonProps> = ({
   className = "",
   onClick 
 }) => {
-  // Use maroon when active, orange when inactive
   const colorClasses = isActive
     ? "text-[#500000] border-[#500000] hover:bg-[#500000] hover:text-white"
     : "text-[#FF5722] border-[#FF5722] hover:bg-[#FF5722] hover:text-white";
@@ -22,8 +21,10 @@ const FeatureButton: React.FC<FeatureButtonProps> = ({
     <button
       onClick={onClick}
       className={`
-      px-3 py-2 rounded-full text-sm font-medium
+      px-3 py-2 sm:px-4 sm:py-3 rounded-full
+      text-xs sm:text-sm md:text-base font-medium
       border-2 transition-colors duration-300
+      whitespace-nowrap min-w-[150px] text-center flex items-center justify-center
       ${colorClasses}
       ${className}
       `}
@@ -32,9 +33,10 @@ const FeatureButton: React.FC<FeatureButtonProps> = ({
     </button>
   );
 };
+
 interface FeatureButtonsProps {
   className?: string;
-  setImageSrc: (src: string) => void; // New prop to update image
+  setImageSrc: (src: string) => void;
 }
 
 const FeatureButtons: React.FC<FeatureButtonsProps> = ({ className = "", setImageSrc }) => {
@@ -46,7 +48,7 @@ const FeatureButtons: React.FC<FeatureButtonsProps> = ({ className = "", setImag
   };
 
   return (
-    <div className={`flex gap-4 ${className}`}>
+    <div className={`flex gap-2 sm:gap-4 justify-center flex-nowrap overflow-hidden ${className}`}>
       <FeatureButton 
         text="Creating Driverpreneurs" 
         isActive={activeButton === 'driverpreneurs'}

@@ -19,7 +19,7 @@ import FeatureButtons from "./FeatureButtons";export default function Hero() {
   }, [lastScrollY]);
 
   return (
-    <section className="w-screen h-screen relative overflow-hidden bg-[#FDE5BF] pb-20 overflow-x-hidden">
+    <section className="w-screen h-screen relative overflow-hidden bg-[#FDE5BF] pb-20 pt-0 overflow-x-hidden">
       {/* Decorative Background Gradients */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-#FEE1B2" />
@@ -63,12 +63,12 @@ import FeatureButtons from "./FeatureButtons";export default function Hero() {
           </div>
 
           {/* Right Section: Rickshaw + Person */}
-          <div className="relative flex justify-center mt-14 w-[700px] h-[700px]"> {/* Fixed container size */}
+          <div className="relative flex justify-center mt-14 w-[700px] h-[600px]"> {/* Fixed container size */}
             <Image
               src={imageSrc}
               alt="Feature Image"
               width={700} // Fixed size
-              height={700} // Fixed size
+              height={600} // Fixed size
               className="object-contain" // Ensures full visibility without clipping
             />
           </div>
