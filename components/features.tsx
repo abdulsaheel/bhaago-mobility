@@ -5,7 +5,7 @@ export default function Features() {
     { icon: "icon_1.svg", title: "16-Hour EV Uptime", description: "No more charging wait times for your vehicle" },
     { icon: "icon_2.svg", title: "100% Green", description: "For the planet, for today, for progress" },
     { icon: "icon_3.svg", title: "Driverprenuers", description: "Join the fleet, be your own boss" },
-    { icon: "icon_4.svg", title: "Strong Partnerships", description: "With giants like Tesla and more" },
+    { icon: "icon_4.svg", title: "Strong Partnerships", description: "With giants like Honda and Valeo" },
     { icon: "icon_5.svg", title: "Tech-Led", description: "Real-time analytics, fleet optimization & driver insights" },
     { icon: "icon_6.svg", title: "Scalable", description: "Go anywhere you go" },
   ];
