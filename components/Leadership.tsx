@@ -3,7 +3,7 @@ import React from 'react';
 const LeadershipTeam = () => {
   const leaders = [
     {
-      name: 'Aditya Goel',
+      name: 'Aditya Goyal',
       position: 'Founder & MD',
       image: '/team/aditya.png' 
     },
