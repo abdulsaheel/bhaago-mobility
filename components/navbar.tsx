@@ -89,10 +89,12 @@ export default function Navbar() {
         </nav>
       </div>
 
-      {/* Contact Us Button (Desktop Only) */}
-      <div className="hidden md:flex absolute right-[5%] bg-[#FF4102] shadow-md transition-opacity duration-500 ease-in-out justify-center items-center w-[130px] h-[40px] rounded-[8px]" style={{ top: "50%", transform: "translateY(-50%)" }}>
-        <span className="text-white font-semibold" style={{ fontFamily: "Georama, sans-serif", fontSize: "14px" }}>Contact Us</span>
-      </div>
+      {/* Contact Us Button (Desktop Only) - Hidden when scrolled */}
+      {!isScrolled && (
+        <div className="hidden md:flex absolute right-[5%] bg-[#FF4102] shadow-md transition-opacity duration-500 ease-in-out justify-center items-center w-[130px] h-[40px] rounded-[8px]" style={{ top: "50%", transform: "translateY(-50%)" }}>
+          <span className="text-white font-semibold" style={{ fontFamily: "Georama, sans-serif", fontSize: "14px" }}>Contact Us</span>
+        </div>
+      )}
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (

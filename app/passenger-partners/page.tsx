@@ -2,16 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import '../globals.css'
+import "../globals.css";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
       <Navbar />
-      
+
       {/* Hero Section */}
       <main className="flex-grow bg-[#fee1b2] px-4 sm:px-6 md:px-12 py-12 pt-24 md:pt-32 relative overflow-hidden">
+        
+        {/* Decorative Background Image - Fixed at 160° rotation & Responsive Size */}
+        <div 
+          className="absolute bottom-0 right-0 bg-[url('/decorative.png')] bg-contain bg-no-repeat opacity-80 pointer-events-none"
+          style={{ 
+            transform: "rotate(160deg)", 
+            width: "clamp(200px, 25vw, 500px)", // Responsive from 200px to 500px
+            height: "clamp(200px, 25vw, 500px)"
+          }}
+        />
+
         <div className="max-w-full sm:max-w-2xl md:max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="z-10 text-center md:text-left">
@@ -24,7 +35,7 @@ export default function Home() {
             </h1>
             
             <p className="mt-6 text-[#390303] text-lg">
-              <span className="font-semibold">Bhago</span> makes urban last mile mobility <span className="font-semibold">effortless - scalable, electric</span>, and <span className="font-semibold">always available</span>. More 
+              <span className="font-semibold">Bhago</span> makes urban last-mile mobility <span className="font-semibold">effortless - scalable, electric</span>, and <span className="font-semibold">always available</span>. More 
               uptime means more rides, better margins, and a smoother experience for both drivers and passengers. 
               The city moves better with <span className="font-semibold">Bhago</span>.
             </p>

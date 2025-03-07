@@ -61,17 +61,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Image */}
-        <div className="w-full flex justify-center md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 md:w-[40%] md:h-[80%]">
-          <Image
-            src="/bhago-van.png"
-            alt="Bhago EV with passenger"
-            width={400} 
-            height={300} 
-            className="object-contain sm:scale-100 md:scale-125"
-            priority
-          />
-        </div>
+{/* Image */}  
+<div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[40%] max-w-[1000px] h-auto">
+  <Image
+    src="/bhago-van.png"
+    alt="Bhago EV with passenger"
+    width={400} 
+    height={300} 
+    className="w-full h-auto object-contain"
+    priority
+  />
+</div>
+
+
       </main>
       
       <Footer />

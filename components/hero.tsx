@@ -21,7 +21,7 @@ export default function Hero() {
   }, [lastScrollY]);
 
   return (
-    <section className="w-screen min-h-screen relative overflow-hidden bg-[#FDE5BF] pb-16 pt-0 overflow-x-hidden">
+    <section className="w-screen min-h-screen relative overflow-hidden bg-[#FDE5BF] pb-16 pt-0">
       {/* Decorative Background Gradients */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-#FEE1B2" />
@@ -43,14 +43,15 @@ export default function Hero() {
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 pb-20 pt-20"> 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          
           {/* Left Section: Text */}
           <div className="space-y-4 text-center lg:text-left">
-            <h1 className="text-[clamp(36px,8vw,90px)] font-black leading-[clamp(40px,9vw,100px)] tracking-[-1%] text-[#FF531A]">
-              Smarter Mobility
-            </h1>
-            <h1 className="text-[clamp(28px,6vw,60px)] font-black leading-[clamp(32px,7vw,75px)] tracking-[-1%] text-[#FF531A]">
-              for a Better India
-            </h1>
+          <h1 className="text-[clamp(60px,7.5vw,110px)] font-black leading-[clamp(65px,8vw,120px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap mb-1">
+            Smarter Mobility
+          </h1>
+          <h1 className="text-[clamp(36px,5.5vw,70px)] font-black leading-[clamp(40px,6vw,80px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap">
+            for a Better India
+          </h1>
             <p className="text-[clamp(16px,4vw,24px)] text-[#6B0606] max-w-xl mx-auto lg:mx-0">
               <strong>Sustainable Last Mile Transport, Sustainable Livelihoods.</strong>
             </p>
@@ -63,15 +64,18 @@ export default function Hero() {
           </div>
 
           {/* Right Section: Rickshaw + Person */}
-          <div className="relative flex justify-center mt-10 lg:mt-14 w-full max-w-[450px] sm:max-w-[500px] mx-auto">
-            <Image
-              src={imageSrc}
-              alt="Feature Image"
-              width={500}
-              height={400}
-              className="object-contain w-full h-auto"
-            />
+          <div className="relative flex justify-center w-full">
+            <div className="w-full max-w-[1100px] flex justify-center">
+              <Image
+                src={imageSrc}
+                alt="Feature Image"
+                width={1100}
+                height={900}
+                className="object-contain w-full h-auto max-w-none scale-125" // Scaling applied here
+              />
+            </div>
           </div>
+
         </div>
       </div>
 

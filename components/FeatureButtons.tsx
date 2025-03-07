@@ -28,7 +28,7 @@ const FeatureButton = ({ text, isActive, className = "", onClick }: { text: stri
   );
 };
 
-const FeatureButtons = ({ className = "", setImageSrc }: { className?: string, setImageSrc: (src: string) => void }) => {
+const FeatureButtons = ({ className = "", setImageSrc }: { className?: string; setImageSrc: (src: string) => void }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -43,22 +43,24 @@ const FeatureButtons = ({ className = "", setImageSrc }: { className?: string, s
     setImageSrc(images[activeIndex].src);
   }, [activeIndex, setImageSrc]);
 
-  const handleButtonClick = (index: React.SetStateAction<number>) => {
+  const handleButtonClick = (index: number) => {
     setActiveIndex(index);
   };
 
   return (
-    <div className={`flex flex-wrap gap-2 sm:gap-4 justify-center ${className}`}>
+    <div className={`flex flex-nowrap gap-4 justify-center w-full ${className}`}>
       {images.map((item, index) => (
         <FeatureButton
           key={item.key}
           text={item.text}
           isActive={activeIndex === index}
+          className="flex-1 min-w-[140px] sm:min-w-[180px] md:min-w-[200px]"
           onClick={() => handleButtonClick(index)}
         />
       ))}
     </div>
   );
 };
+
 
 export default FeatureButtons;
