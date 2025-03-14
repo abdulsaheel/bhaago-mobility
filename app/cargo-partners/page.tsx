@@ -98,6 +98,10 @@ export default function Home() {
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Trusted</span> by leading e-commerce platforms</span>
               </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="text-[#ff4102] mr-2">•</span>
+                <span><span className="font-semibold">Reliable & Safe</span> tsransportation with a trusted flee</span>
+              </li>
             </ul>
 
             <div className="mt-10">
@@ -107,20 +111,10 @@ export default function Home() {
               </h3>
             </div>
             
-            <ContactUs className="mt-6" />
+            <ContactUs/>
           </div>
         </div>
 
-<div className="absolute right-0 top-[65%] transform -translate-y-1/2 w-[60%] max-w-[1200px] h-auto z-0">
-  <Image
-    src="/van-bg.png" // Replace with your background image path
-    alt="Background Image"
-    width={1000} // Adjust as needed
-    height={600} // Adjust as needed
-    className="w-full h-auto object-contain opacity-50" // Adjust opacity as needed
-    priority
-  />
-</div>
 
 {/* Main Image (In Front) */}
 <div className="absolute right-0 top-[65%] transform -translate-y-1/2 w-[50%] max-w-[1000px] h-auto z-10">

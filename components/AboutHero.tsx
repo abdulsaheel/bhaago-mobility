@@ -7,7 +7,7 @@ export default function AboutHero() {
       <div className="h-20" />
       <h1 
         className="text-[8vw] leading-[11vw] text-[#390303] tracking-[-1%] pt-30 text-center font-bold max-w-[90%] absolute z-20" 
-        style={{ fontFamily: 'Georama', transform: 'translateY(-50%)' }}
+        style={{ fontFamily: 'Georama', transform: 'translateY(-65%)' }}
       >
         Built to Last,<br />Built for Impact
       </h1>

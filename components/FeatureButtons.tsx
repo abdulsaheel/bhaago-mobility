@@ -48,19 +48,20 @@ const FeatureButtons = ({ className = "", setImageSrc }: { className?: string; s
   };
 
   return (
-    <div className={`flex flex-nowrap gap-4 justify-center w-full ${className}`}>
+    <div className={`flex flex-wrap justify-center items-center gap-2 w-full sm:flex-nowrap sm:gap-4 ${className}`}>
       {images.map((item, index) => (
         <FeatureButton
           key={item.key}
           text={item.text}
           isActive={activeIndex === index}
-          className="flex-1 min-w-[140px] sm:min-w-[180px] md:min-w-[200px]"
+          className="px-6 py-2.5 sm:px-7 sm:py-3 md:px-8 md:py-3.5 rounded-full text-xs sm:text-sm md:text-base font-medium leading-relaxed border-2 transition-colors duration-300 whitespace-nowrap min-w-[140px] sm:min-w-[180px] md:min-w-[200px] text-center flex items-center justify-center"
           onClick={() => handleButtonClick(index)}
         />
       ))}
     </div>
   );
 };
+
 
 
 export default FeatureButtons;

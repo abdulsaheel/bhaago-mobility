@@ -69,9 +69,11 @@ export default function Navbar() {
         {/* Call Icon Inside Navbar When Scrolled */}
         {isScrolled && (
           <div className="absolute right-5 flex items-center">
+            <a href="tel:+91-172-2609002" >
             <div className="bg-[#FF4102] w-[40px] h-[40px] rounded-full flex justify-center items-center shadow-md">
               <FaPhoneFlip className="text-white text-xl" />
             </div>
+            </a>
           </div>
         )}
 
@@ -91,9 +93,13 @@ export default function Navbar() {
 
       {/* Contact Us Button (Desktop Only) - Hidden when scrolled */}
       {!isScrolled && (
+  <a href="tel:+91-172-2609002" className="text-white font-semibold" style={{ fontFamily: "Georama, sans-serif", fontSize: "14px" }}>
+
         <div className="hidden md:flex absolute right-[5%] bg-[#FF4102] shadow-md transition-opacity duration-500 ease-in-out justify-center items-center w-[130px] h-[40px] rounded-[8px]" style={{ top: "50%", transform: "translateY(-50%)" }}>
-          <span className="text-white font-semibold" style={{ fontFamily: "Georama, sans-serif", fontSize: "14px" }}>Contact Us</span>
-        </div>
+    Contact Us
+</div>
+</a>
+
       )}
 
       {/* Mobile Menu Overlay */}
@@ -112,9 +118,10 @@ export default function Navbar() {
             </Link>
           ))}
           {/* Contact Us Button Inside Mobile Menu */}
-          <Link href="/contact" className="mt-6 bg-[#FF4102] text-white text-center py-2 rounded-md font-semibold">
-            Contact Us
-          </Link>
+          <Link href="tel:+91-172-2609002" className="mt-6 bg-[#FF4102] text-white text-center py-2 rounded-md font-semibold">
+  Contact Us
+</Link>
+
         </nav>
       </div>
     </div>

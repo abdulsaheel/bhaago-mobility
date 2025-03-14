@@ -4,7 +4,7 @@ import { Lightbulb, ShieldCheck, Leaf, Users } from 'lucide-react'; // Import mo
 interface ValueCardProps {
     title: string;
     description: string;
-    Icon: React.ElementType;
+    Icon: React.ComponentType<{ className?: string }>;
 }
 
 const ValueCard = ({ title, description, Icon }: ValueCardProps) => (

@@ -43,19 +43,19 @@ export default function Gamechangers() {
               title: "Creating\n**Driverpreneurs**:",
               bg: "#FF5C00",
               imageUrl: "/gamechangers/driverpreneur.png",
-              description: "Bhago turns everyday driver into an entrepreneur. No middlemen, no endless rentals, just a straight & simple road to ownership and a business they can call their own. More accountability, more earnings, and more stability for you."
+              description: "Bhago turns drivers to entrepreneurs through simplified vehicle ownership. By removing barriers such as low credit scores, lack of formal education & upfront capital deposit. With a potential to earn more than double the minimum wage."
             },
             {
-              title: "**4-Min** Battery\nSwap:",
+              title: "**Industry** Leading\nUptime:",
               bg: "#FF8332",
               imageUrl: "/gamechangers/battery-swap.png",
               description: "Most electric vehicles spend half their life asleep, waiting to recharge. Bhago EVs don't have that luxury. They swap batteries like an F1 pit stop and get right back to work. Upto 16 hours a day, every day. No downtime, no excuses - just relentless movement.\nPowered by Honda Battery E-Swap"
             },
             {
-              title: "**Sun-Powered** \nSpeed:",
+              title: "**Sun-Powered** \nHubs:",
               bg: "#FF5732",
               imageUrl: "/gamechangers/sun-powered.png",
-              description: "Most battery charging stations sip from the grid or even use fossil fuels. Bhago drinks straight from the sun. Our solar-powered battery charging hubs keep the fleet running clean, no fossil fuels, no guilt - just pure, uninterrupted movement. 100% green. Let's Bhago to the future!\nPowered by our Solar Charging Hubs"
+              description: "Bhago charges straight from the sun -100% green, no fossil fuels, no guilt. Our hubs do more than power vehicles; they support drivers with rest areas, food, maintenance, and smooth in-and-out access. Because off-roadtimematters too"
             },
             {
               title: "**Tech-Led**:",

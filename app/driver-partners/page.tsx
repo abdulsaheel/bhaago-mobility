@@ -65,7 +65,7 @@ export default function Home() {
           <div className="z-10 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-bold text-[#6b0606] leading-tight">
               <div className="sm:block md:flex items-center md:whitespace-nowrap">
-                <span>Your <strong>EV</strong> </span>
+                <span>Your <strong>EV.</strong> </span>
                 <span className="md:ml-4">Your Earnings.</span>
               </div>
               <span>Your Future.</span>

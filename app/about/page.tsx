@@ -2,12 +2,12 @@
 import Navbar from "@/components/navbar";
 import AboutHero from "@/components/AboutHero";
 import BhagoMobilityBanner from "@/components/BhagoMobilityBanner";
-import BhagoMobilityTimeline from "@/components/Timeline";
 import LeadershipTeam from "@/components/Leadership";
 import VisionSection from "@/components/Vision";
 import Footer from "@/components/footer";
 import '@/app/globals.css'
-import { Timeline } from "@/components/about_timeline";
+import Timeline  from "@/components/about_timeline";
+
 
 export default function About() {
   return (
@@ -24,9 +24,7 @@ export default function About() {
         <BhagoMobilityBanner />
 
         {/* Bhago Mobility Timeline */}
-        <BhagoMobilityTimeline />
         <Timeline />
-
         {/* Leadership Team */}
         <LeadershipTeam />
 

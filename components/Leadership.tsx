@@ -9,7 +9,7 @@ const LeadershipTeam = () => {
     },
     {
       name: 'BS Jolly',
-      position: 'Director',
+      position: 'Director, R&D & Innovation',
       image: '/team/jolly.png' 
     },
     {
@@ -19,12 +19,12 @@ const LeadershipTeam = () => {
     },
     {
       name: 'Ishaan Bedi',
-      position: 'Director',
+      position: 'Sr. Advisor - Fleet',
       image: '/team/ishaan.png' 
     },
     {
       name: 'Saurabh Goyal',
-      position: 'Director',
+      position: 'Sr. Advisor – Strategic Initiatives',
       image: '/team/saurabh.png' 
     }
   ];

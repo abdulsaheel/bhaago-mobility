@@ -46,9 +46,9 @@ export default function Hero() {
           
           {/* Left Section: Text */}
           <div className="space-y-4 text-center lg:text-left">
-          <h1 className="text-[clamp(60px,7.5vw,110px)] font-black leading-[clamp(65px,8vw,120px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap mb-1">
+            <h1 className="text-[clamp(36px,7.5vw,110px)] md:text-[clamp(60px,7.5vw,110px)] font-black leading-[clamp(40px,8vw,120px)] md:leading-[clamp(65px,8vw,120px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap mb-1">
             Smarter Mobility
-          </h1>
+            </h1>
           <h1 className="text-[clamp(36px,5.5vw,70px)] font-black leading-[clamp(40px,6vw,80px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap">
             for a Better India
           </h1>

@@ -109,6 +109,14 @@ export default function Home() {
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span>Supports government <span className="font-semibold">smart city initiatives</span></span>
               </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="text-[#ff4102] mr-2">•</span>
+                <span>Reliable & Safe <span className="font-semibold">rides, including women drivers & child-friendly options</span></span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="text-[#ff4102] mr-2">•</span>
+                <span className="font-semibold">Enhanced night-time safety</span>
+              </li>
             </ul>
             
             <div className="mt-10">
