@@ -16,8 +16,10 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
             
             <div className="mb-8">
               <h3 className="font-semibold mb-2">Find Us here</h3>
-              <p className="text-sm mb-1">BHAGO MOBILITY SOLUTIONS PRIVATE LIMITED S.C.O. 98-99,</p>
-              <p className="text-sm">Sub City Center, Sector 34-A, Chandigarh 160022 (INDIA)</p>
+              <p className="text-sm mb-1">Bhago Mobility Solutions</p>
+              <p className="text-sm mb-1">Brigade Summit Office, 12th Floor, Summit-B, B-9, ITPL Main Road</p>
+              <p className="text-sm mb-1">Brigade Metropolis, Garudachar Palya</p>
+              <p className="text-sm mb-1">Mahadevpura, Bangalore- 560048 Karnataka</p>
             </div>
             
             <div>
