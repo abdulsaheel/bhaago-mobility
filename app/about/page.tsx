@@ -7,6 +7,8 @@ import LeadershipTeam from "@/components/Leadership";
 import VisionSection from "@/components/Vision";
 import Footer from "@/components/footer";
 import '@/app/globals.css'
+import { Timeline } from "@/components/about_timeline";
+
 export default function About() {
   return (
     
@@ -23,6 +25,7 @@ export default function About() {
 
         {/* Bhago Mobility Timeline */}
         <BhagoMobilityTimeline />
+        <Timeline />
 
         {/* Leadership Team */}
         <LeadershipTeam />

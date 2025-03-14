@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
             
             <div>
               <h3 className="font-semibold mb-2">Get In Touch</h3>
-              <p className="text-sm mb-1">+91-172-2609902, 2699903</p>
+              <p className="text-sm mb-1">+91-172-2609002, 2699003</p>
               <a 
                 href="mailto:contactus@bhagomobility.com" 
                 className="inline-block bg-[#FBE4CF] text-[#390303] text-sm px-3 py-1 rounded-md transition-colors"

@@ -12,6 +12,54 @@ export default function Home() {
 
       {/* Hero Section */}
       <main className="flex-grow bg-[#fee1b2] px-4 sm:px-6 md:px-12 py-12 pt-24 md:pt-32 relative overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
+                
+      <svg
+      className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+      viewBox="0 0 1440 500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      {/* Thick White Path */}
+      <path
+        d="M0 200H300C320 200 350 230 350 270V370C350 410 380 440 420 440H900C940 440 970 470 970 510V600"
+        stroke="white"
+        strokeWidth="80" /* Thick stroke for the base */
+        strokeLinecap="round"
+        opacity="0.66" /* Lower opacity */
+      />
+      
+      {/* Dashed Peach Line */}
+      <path
+        d="M0 200H300C320 200 350 230 350 270V370C350 410 380 440 420 440H900C940 440 970 470 970 510V600"
+        stroke="#FFCBA3"
+        strokeWidth="10" /* Thinner dashed line */
+        strokeLinecap="round"
+        strokeDasharray="30 20" /* Creates the dashed effect */
+        opacity="0.66" /* Lower opacity */
+      />
+    </svg></div>
+                
+                {/* Curved Path Background */}
+                <svg 
+          className="absolute bottom-0 left-0 w-full h-auto z-0" 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          style={{ minHeight: "320px" }}
+        >
+          <path 
+            fill="#feb478" 
+            fillOpacity="0.15"
+            d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,224C840,224,960,192,1080,197.3C1200,203,1320,245,1380,266.7L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+          <path 
+            fill="#feb478" 
+            fillOpacity="0.25"
+            d="M0,224L60,208C120,192,240,160,360,170.7C480,181,600,235,720,250.7C840,267,960,245,1080,218.7C1200,192,1320,160,1380,144L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
         
         {/* Decorative Background Image - Fixed at 160° rotation & Responsive Size */}
         <div 

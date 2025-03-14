@@ -1,124 +1,104 @@
-import React from "react";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import  Navbar  from "@/components/navbar"
+import AutoScrollingCarousel from "@/components/AutoScrollingCarousel"
+import CoreValuesSection from "@/components/CoreValuesSection"
+import Image from "next/image"
+import Footer from "@/components/footer"
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <div className="bg-white">
-<Navbar />
+    <main className="bg-[#FEE1B2] flex flex-col">
 
-      {/* HERO SECTION */}
-      <section className="bg-[#FBE4CF] py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col-reverse md:flex-row items-center">
-          {/* Left Text */}
-          <div className="md:w-1/2 mt-8 md:mt-0">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#390303] mb-4 leading-tight">
-              Drive the <span className="text-[#FF9966]">Change.</span> <br />
-              Build the <span className="text-[#FF9966]">Future.</span>
-            </h1>
-            <p className="text-[#6A1A00] mb-6 text-sm md:text-base leading-relaxed">
-              At Bhago, we move fast, because the future doesn’t wait. We’re building 
-              robust solutions that will move 50 million people daily, cargo across 
-              the nation, and every day, bring a solution that’s a little greener, 
-              a little better.
-            </p>
+      <Navbar/>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-[#FEE1B2]">
+  {/* SVG Background - Positioned Higher */}
+  <div 
+    className="absolute inset-0 z-10 opacity-40 bg-no-repeat bg-center bg-cover"
+    style={{ 
+      backgroundImage: "url('/hiring-bg.svg')", 
+      top: "-100px"  // Moves the SVG up 
+    }} 
+  />
+
+  <div className="container mx-auto px-4 py-20 md:py-28 relative z-20">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="md:w-1/2 mb-12 md:mb-0">
+        <h1 className="text-6xl md:text-7xl font-bold text-[#390303]">
+          Drive the <span className="text-[#FF4102]">Change.</span>
+        </h1>
+        <h1 className="text-6xl md:text-7xl font-bold text-[#390303] mt-4">
+          Build the <span className="text-[#FF4102]">Future.</span>
+        </h1>
+
+        <div className="mt-10 text-[#390303] max-w-xl">
+          <p className="text-xl">
+            At <span className="font-bold">Bhago</span>, we move fast, because the future won't wait. We're not
+            just building EV fleets; we're creating a <span className="font-bold">movement</span> powered by{" "}
+            <span className="font-bold">innovation, efficiency, and people</span> who think on their feet.
+          </p>
+          <p className="text-xl mt-6">
+            Whether you're{" "}
+            <span className="font-bold">fine-tuning operations, solving real-world mobility challenges</span>, or
+            working on tech that keeps our wheels turning, this is a place where{" "}
+            <span className="font-bold">ideas matter, ownership is real</span>, and every role drives{" "}
+            <span className="font-bold">impact</span>.
+          </p>
+        </div>
+      </div>
+      <div className="md:w-1/2 flex justify-center">
+        <Image
+          src="/rickshaw.png"
+          alt="Drive the Change Build the Future"
+          width={800}
+          height={800}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* Create a single continuous flow with negative margins to force components together */}
+      <div className="flex flex-col" style={{ marginBottom: "-8px" }}>
+        {/* AutoScrollingCarousel with custom styles */}
+        <div style={{ marginBottom: "-1px" }}>
+          <AutoScrollingCarousel
+            images={[
+              "/carousel_1.png",
+              "/carousel_2.png",
+              "/carousel_3.png",
+              "/carousel_4.png",
+              "/carousel_5.png",
+            ]}
+          />
+        </div>
+        
+        {/* Core Values Section with negative margin */}
+        <div style={{ marginTop: "-1px" }}>
+          <CoreValuesSection />
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 relative" style={{ marginTop: "-8px" }}>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <h2 className="text-3xl md:text-4xl text-[#390303] mb-8 md:mb-0">
+              Ready to <span className="text-[#390303] font-bold">build</span> something that moves
+              <br />
+              the world? <span className="text-[#390303] font-bold">Join us.</span>
+            </h2>
+
             <a
-              href="#apply"
-              className="inline-block bg-[#FF9966] text-[#390303] font-semibold px-6 py-3 rounded-md transition-colors hover:bg-[#f47b3e]"
+              href="#"
+              className="bg-[#FF4102] hover:bg-[#d04a25] text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300"
             >
               Apply Now
             </a>
           </div>
-
-          {/* Right Image */}
-          <div className="md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src="/rickshaw.png"
-              alt="Bhago Rickshaw"
-              className="max-w-full h-auto"
-            />
-          </div>
         </div>
       </section>
-
-      {/* CORE VALUES SECTION */}
-      <section className="relative py-12 md:py-16 bg-white">
-      <div 
-            className="absolute inset-0 bg-[url('/landing top spin flower.svg')] 
-                       bg-no-repeat bg-center opacity-10 pointer-events-none" 
-          />
-        <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#390303] text-center mb-12">
-            Core Values
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Value 1 */}
-            <div className="bg-[#FBE4CF] rounded-md p-6">
-              <h3 className="text-xl font-semibold text-[#390303] mb-2">
-                Move with Purpose
-              </h3>
-              <p className="text-[#6A1A00] text-sm md:text-base">
-                We’re building robust solutions that will move 50 million people 
-                daily, connecting them to work, opportunities, and each other.
-              </p>
-            </div>
-
-            {/* Value 2 */}
-            <div className="bg-[#FBE4CF] rounded-md p-6">
-              <h3 className="text-xl font-semibold text-[#390303] mb-2">
-                Built to Last
-              </h3>
-              <p className="text-[#6A1A00] text-sm md:text-base">
-                One platform for cargo, vehicles, and supply chain solutions — 
-                reliable, scalable, and here to stay.
-              </p>
-            </div>
-
-            {/* Value 3 */}
-            <div className="bg-[#FBE4CF] rounded-md p-6">
-              <h3 className="text-xl font-semibold text-[#390303] mb-2">
-                Greener is the Goal
-              </h3>
-              <p className="text-[#6A1A00] text-sm md:text-base">
-                Cleaner energy, zero emissions, and a positive impact on our planet. 
-                It’s only possible together.
-              </p>
-            </div>
-
-            {/* Value 4 */}
-            <div className="bg-[#FBE4CF] rounded-md p-6">
-              <h3 className="text-xl font-semibold text-[#390303] mb-2">
-                Win Together
-              </h3>
-              <p className="text-[#6A1A00] text-sm md:text-base">
-                We grow with our riders, partners, and people. We share success and 
-                lift each other up.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA / JOIN US SECTION */}
-      <section className="bg-[#FBE4CF] py-12 md:py-16 text-center">
-        <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#390303] mb-6">
-            Ready to build something that moves the world? Join us.
-          </h2>
-          <a
-            id="apply"
-            href="#"
-            className="inline-block bg-[#FF9966] text-[#390303] font-semibold px-6 py-3 rounded-md transition-colors hover:bg-[#f47b3e]"
-          >
-            Apply Now
-          </a>
-        </div>
-      </section>
-
-<Footer />
-    </div>
-  );
-};
-
-export default Home;
+      <Footer/>
+    </main>
+  )
+}
