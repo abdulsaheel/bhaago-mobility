@@ -20,6 +20,7 @@ export default function Home() {
     }} 
   />
 
+
   <div className="container mx-auto px-4 py-20 md:py-28 relative z-20">
     <div className="flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 mb-12 md:mb-0">
