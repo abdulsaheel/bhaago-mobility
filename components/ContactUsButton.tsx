@@ -79,14 +79,14 @@ const ContactUs = ({ className }: { className?: string }) => {
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogContent className="max-w-3xl p-0 overflow-hidden bg-[#FFF3EF] border-none">
                     {/* Large "CONTACT US" text */}
-                    <div className="absolute top-[-30px] left-0 w-full overflow-hidden text-center">
+                    {/* <div className="absolute top-[-30px] left-0 w-full overflow-hidden text-center">
                         <h1
                             className="text-[100px] font-bold text-transparent leading-none tracking-wide"
                             style={{ WebkitTextStroke: "1px rgba(255, 87, 34, 0.6)" }}
                         >
                             CONTACT US
                         </h1>
-                    </div>
+                    </div> */}
 
                     {/* Form Content */}
                     <div className="relative z-10 px-12 py-16 space-y-6">

@@ -6,45 +6,43 @@ import ContactUs from "@/components/ContactUsButton";
 
 export default function Home() {
   return (
-    
     <div className="relative flex flex-col min-h-screen">
-      {/* Curved Path Background */}
-
       {/* Navbar */}
       <Navbar />
       
       {/* Hero Section */}
       <main className="flex-grow bg-[#fee1b2] px-4 sm:px-6 md:px-12 py-12 pt-24 md:pt-32 relative overflow-hidden">
-                       {/* Curved Path Background */}
-                       <div className="absolute inset-0 w-full h-full">
-                       <svg
-      className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-      viewBox="0 0 1004 1545"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="xMidYMid slice"
-    >
-      {/* Thick White Path (Lower Opacity) */}
-      <path
-        d="M50 0V300C50 320 80 350 120 350H750C790 350 820 380 820 420V900C820 940 790 970 750 970H200C160 970 130 1000 130 1040V1545"
-        stroke="white"
-        strokeWidth="80" /* Thick stroke for the base */
-        strokeLinecap="round"
-        opacity="0.66" /* Lower opacity */
-      />
-      
-      {/* Dashed Peach Line (Lower Opacity) */}
-      <path
-        d="M50 0V300C50 320 80 350 120 350H750C790 350 820 380 820 420V900C820 940 790 970 750 970H200C160 970 130 1000 130 1040V1545"
-        stroke="#FFCBA3"
-        strokeWidth="10" /* Thinner dashed line */
-        strokeLinecap="round"
-        strokeDasharray="30 20" /* Creates the dashed effect */
-        opacity="0.66" /* Lower opacity */
-      />
-    </svg>
-                      </div>
-                       <svg 
+        {/* Curved Path Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <svg
+            className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+            viewBox="0 0 1004 1545"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Thick White Path (Lower Opacity) */}
+            <path
+              d="M50 0V300C50 320 80 350 120 350H750C790 350 820 380 820 420V900C820 940 790 970 750 970H200C160 970 130 1000 130 1040V1545"
+              stroke="white"
+              strokeWidth="80"
+              strokeLinecap="round"
+              opacity="0.66"
+            />
+            {/* Dashed Peach Line (Lower Opacity) */}
+            <path
+              d="M50 0V300C50 320 80 350 120 350H750C790 350 820 380 820 420V900C820 940 790 970 750 970H200C160 970 130 1000 130 1040V1545"
+              stroke="#FFCBA3"
+              strokeWidth="10"
+              strokeLinecap="round"
+              strokeDasharray="30 20"
+              opacity="0.66"
+            />
+          </svg>
+        </div>
+
+        {/* Bottom SVG Waves */}
+        <svg 
           className="absolute bottom-0 left-0 w-full h-auto z-0" 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 1440 320"
@@ -62,6 +60,8 @@ export default function Home() {
             d="M0,224L60,208C120,192,240,160,360,170.7C480,181,600,235,720,250.7C840,267,960,245,1080,218.7C1200,192,1320,160,1380,144L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
           ></path>
         </svg>
+
+        {/* Content Container */}
         <div className="max-w-full sm:max-w-2xl md:max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="z-10 text-center md:text-left">
@@ -78,32 +78,32 @@ export default function Home() {
             </p>
             
             <ul className="mt-8 space-y-2 text-[#390303] text-left md:text-left">
-              <li className="flex items-start justify-center md:justify-start">
+              <li className="flex items-start md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span>Industry-first <span className="font-semibold">16-hour fleet uptime</span> with fast battery swaps</span>
               </li>
-              <li className="flex items-start justify-center md:justify-start">
+              <li className="flex items-start md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Lower operational costs</span> & higher efficiency</span>
               </li>
-              <li className="flex items-start justify-center md:justify-start">
+              <li className="flex items-start md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Eco-friendly logistics</span> aligned with corporate ESG goals</span>
               </li>
-              <li className="flex items-start justify-center md:justify-start">
+              <li className="flex items-start md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Seamless integration</span> with your supply chain</span>
               </li>
-              <li className="flex items-start justify-center md:justify-start">
+              <li className="flex items-start md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
                 <span><span className="font-semibold">Trusted</span> by leading e-commerce platforms</span>
               </li>
-              <li className="flex items-start justify-center md:justify-start">
+              <li className="flex items-start md:justify-start">
                 <span className="text-[#ff4102] mr-2">•</span>
-                <span><span className="font-semibold">Reliable & Safe</span> tsransportation with a trusted flee</span>
+                <span><span className="font-semibold">Reliable & Safe</span> transportation with a trusted fleet</span>
               </li>
             </ul>
-
+            
             <div className="mt-10">
               <h3 className="text-xl font-bold text-[#390303]">
                 Partner with <strong>Bhago</strong> for a <br/>
@@ -115,19 +115,29 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Desktop Image (Visible on md screens and above) */}
+        <div className="absolute right-0 top-[65%] transform -translate-y-1/2 w-[50%] max-w-[1000px] h-auto z-10 hidden md:block">
+          <Image
+            src="/bhago-van.png"
+            alt="Bhago EV with passenger"
+            width={800} 
+            height={450} 
+            className="w-full h-auto object-contain"
+            priority
+          />
+        </div>
 
-{/* Main Image (In Front) */}
-<div className="absolute right-0 top-[65%] transform -translate-y-1/2 w-[50%] max-w-[1000px] h-auto z-10">
-  <Image
-    src="/bhago-van.png"
-    alt="Bhago EV with passenger"
-    width={800} 
-    height={450} 
-    className="w-full h-auto object-contain"
-    priority
-  />
-</div>
-
+        {/* Mobile Image (Visible on screens smaller than md) */}
+        <div className="relative w-full mt-8 md:hidden">
+          <Image
+            src="/bhago-van.png"
+            alt="Bhago EV with passenger"
+            width={800} 
+            height={450} 
+            className="w-full h-auto object-contain"
+            priority
+          />
+        </div>
       </main>
       
       <Footer />

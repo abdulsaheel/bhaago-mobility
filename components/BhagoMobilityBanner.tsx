@@ -14,17 +14,32 @@ const BhagoMobilityBanner = () => {
     <div className="flex flex-col">
       {/* First orange section */}
       <div className="bg-[#FF5C00] py-4 px-6 text-white font-medium text-center rounded-t-xl">
-        <p>Mission-driven, impact-focused EV mobility provider</p>
+      <p>Mission-driven, impact-focused EV mobility provider</p>
       </div>
       
       {/* Second orange section with slightly lighter color */}
       <div className="bg-[#FF8332] py-4 px-6 text-white font-medium text-center border-t border-orange-300">
-        <p>Strategic partnerships with Honda & Valeo</p>
+      <p>Strategic partnerships with Honda & Valeo</p>
       </div>
       
       {/* Third orange section with even lighter color */}
-      <div className="bg-[#EE9459] py-4 px-6 text-white font-medium text-center border-t border-orange-200 rounded-b-xl">
-        <p>Expanding across major Indian cities</p>
+      <div className="bg-[#EE9459] py-4 px-6 text-white font-medium text-center border-t border-orange-200">
+      <p>Expanding across major Indian cities</p>
+      </div>
+
+      {/* Fourth orange section with even lighter color */}
+      <div className="bg-[#F4A072] py-4 px-6 text-white font-medium text-center border-t border-orange-100">
+      <p>Backed by an enterprise with a 100 year legacy</p>
+      </div>
+
+      {/* Fifth orange section with even lighter color */}
+      <div className="bg-[#F7B08C] py-4 px-6 text-white font-medium text-center border-t border-orange-100">
+      <p>Technologically focused</p>
+      </div>
+
+      {/* Sixth orange section with even lighter color */}
+      <div className="bg-[#F9C4B0] py-4 px-6 text-white font-medium text-center border-t border-orange-100 rounded-b-xl">
+      <p>Enduring relationships with companies like Honda, Nestle, Mother Dairy, GSK, Yamaha, BMW</p>
       </div>
     </div>
     </div>

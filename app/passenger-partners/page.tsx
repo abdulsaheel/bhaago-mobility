@@ -89,35 +89,35 @@ export default function Home() {
             </p>
             
             <ul className="mt-8 space-y-2 text-[#390303] text-left md:text-left">
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span>Dependable EV fleet with <span className="font-semibold">24/7 availability</span></span>
-              </li>
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span><span className="font-semibold">Lower cost-per-km</span> than traditional autos</span>
-              </li>
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span>Optimized for <span className="font-semibold">ride-sharing</span> & urban commutes</span>
-              </li>
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span><span className="font-semibold">Higher uptime</span> = More rides, better margins</span>
-              </li>
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span>Supports government <span className="font-semibold">smart city initiatives</span></span>
-              </li>
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span>Reliable & Safe <span className="font-semibold">rides, including women drivers & child-friendly options</span></span>
-              </li>
-              <li className="flex items-start justify-center md:justify-start">
-                <span className="text-[#ff4102] mr-2">•</span>
-                <span className="font-semibold">Enhanced night-time safety</span>
-              </li>
-            </ul>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span>Dependable EV fleet with <span className="font-semibold">24/7 availability</span></span>
+  </li>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span><span className="font-semibold">Lower cost-per-km</span> than traditional autos</span>
+  </li>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span>Optimized for <span className="font-semibold">ride-sharing</span> & urban commutes</span>
+  </li>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span><span className="font-semibold">Higher uptime</span> = More rides, better margins</span>
+  </li>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span>Supports government <span className="font-semibold">smart city initiatives</span></span>
+  </li>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span>Reliable & Safe <span className="font-semibold">rides, including women drivers & child-friendly options</span></span>
+  </li>
+  <li className="flex items-start md:justify-start">
+    <span className="text-[#ff4102] mr-2">•</span>
+    <span className="font-semibold">Enhanced night-time safety</span>
+  </li>
+</ul>
             
             <div className="mt-10">
               <h3 className="text-xl font-bold text-[#390303]">

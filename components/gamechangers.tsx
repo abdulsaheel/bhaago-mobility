@@ -42,7 +42,7 @@ export default function Gamechangers() {
             {
               title: "Creating\n**Driverpreneurs**:",
               bg: "#FF5C00",
-              imageUrl: "/gamechangers/driverpreneur.png",
+              imageUrl: "/rickshaw.png",
               description: "Bhago turns drivers to entrepreneurs through simplified vehicle ownership. By removing barriers such as low credit scores, lack of formal education & upfront capital deposit. With a potential to earn more than double the minimum wage."
             },
             {

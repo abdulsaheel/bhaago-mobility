@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const images = [
   { key: 'driverpreneurs', text: 'Creating Driverpreneurs', src: '/rickshaw.png' },
-  { key: 'solar', text: '100% Solar Powered', src: '/solar-charger.png' },
+  { key: 'green', text: '100% Green', src: '/solar-charger.png' },
   { key: 'uptime', text: 'Industry Leading Uptime', src: '/industry-leading.png' }
 ];
 
