@@ -23,7 +23,7 @@ const ContactUs = ({ className }: { className?: string }) => {
         try {
             // Send the request asynchronously in the background
             fetch(
-                "https://script.google.com/macros/s/AKfycbyFtByY18CERI8ThS6LyL5qmRhVDHlIbOryV08Y1QPBZt54g6LdvWaBNt-oDIbsp7wc/exec",
+                "https://script.google.com/macros/s/AKfycbxVz09LwbN9KXN9q9VlWWMxTrJnsRXRe4P1bmXdZjZUhD7LmLRZ_lqh1on7Yk2g0WJJpg/exec",
                 {
                     method: "POST",
                     headers: {
