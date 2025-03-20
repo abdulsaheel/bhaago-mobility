@@ -56,69 +56,11 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v4
         with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-      
-      # Custom step to dynamically update next.config.mjs
-      - name: Update Next.js config for GitHub Pages
-        run: |
-          # Check if next.config.mjs exists, if not create it
-          if [ ! -f "next.config.mjs" ]; then
-            echo "Creating next.config.mjs file"
-            echo "export default {};" > next.config.mjs
-          fi
+          generator_config_file: ./next.config.mjs
           
-          # Update next.config.mjs with dynamic basePath configuration
-          cat > next.config.tmp.mjs << 'EOL'
-          // next.config.mjs
-          const isGithubActions = process.env.GITHUB_ACTIONS || false;
-          let basePath = '';
-          
-          if (isGithubActions) {
-            // Trim the repo name from the GITHUB_REPOSITORY env var
-            const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
-            basePath = `/${repo}`;
-          }
-          
-          // Merge with existing config from the original next.config.mjs
-          import { createRequire } from 'module';
-          import { fileURLToPath } from 'url';
-          import { dirname } from 'path';
-          import fs from 'fs';
-          
-          const __filename = fileURLToPath(import.meta.url);
-          const __dirname = dirname(__filename);
-          
-          let existingConfig = {};
-          try {
-            const configContent = fs.readFileSync('next.config.mjs', 'utf8');
-            // Extract the configuration object from the file
-            const match = configContent.match(/export\s+default\s+(?:defineConfig\()?({[\s\S]*})(?:\))?;?/);
-            if (match && match[1]) {
-              const configStr = match[1].replace(/(\w+):/g, '"$1":').replace(/,\s*}/g, '}');
-              existingConfig = JSON.parse(configStr);
-            }
-          } catch (e) {
-            console.log('Could not parse existing config, using defaults');
-          }
-          
-          export default {
-            ...existingConfig,
-            basePath,
-            output: 'export',
-            images: {
-              unoptimized: true,
-            },
-          };
-          EOL
-          
-          mv next.config.tmp.mjs next.config.mjs
-          cat next.config.mjs
       
       - name: Restore cache
         uses: actions/cache@v4
