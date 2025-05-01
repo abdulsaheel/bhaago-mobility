@@ -40,44 +40,52 @@ export default function Hero() {
         }}
       />
 
-      {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 pb-20 pt-20"> 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          
-          {/* Left Section: Text */}
-          <div className="space-y-4 text-center lg:text-left">
-            <h1 className="text-[clamp(36px,7.5vw,110px)] md:text-[clamp(60px,7.5vw,110px)] font-black leading-[clamp(40px,8vw,120px)] md:leading-[clamp(65px,8vw,120px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap mb-1">
-            Smarter Mobility
-            </h1>
-          <h1 className="text-[clamp(36px,5.5vw,70px)] font-black leading-[clamp(40px,6vw,80px)] tracking-[-1%] text-[#FF531A] whitespace-nowrap">
-            for a Better India
-          </h1>
-            <p className="text-[clamp(16px,4vw,24px)] text-[#6B0606] max-w-xl mx-auto lg:mx-0">
-              <strong>Sustainable Last Mile Transport, Sustainable Livelihoods.</strong>
-            </p>
-            <p className="text-[clamp(14px,3.5vw,18px)] text-[#6B0606] max-w-xl mx-auto lg:mx-0">
-              Last-mile transport doesn’t have to be unreliable, expensive, or polluting. Our <strong>electric fleet</strong> keeps people and packages moving - <strong>fast, affordable, and green.</strong> By offering disruptive vehicle uptime and <strong>micro-entrepreneurship</strong> opportunities across <strong>passenger & cargo</strong> mobility.
-            </p>
-            <div className="pt-6 flex justify-center lg:justify-start">
-              <FeatureButtons className="flex-wrap justify-start" setImageSrc={setImageSrc} />
-            </div>
-          </div>
-
-          {/* Right Section: Rickshaw + Person */}
-          <div className="relative flex justify-center w-full">
-            <div className="w-full max-w-[1100px] flex justify-center">
-              <Image
-                src={imageSrc}
-                alt="Feature Image"
-                width={1100}
-                height={900}
-                className="object-contain w-full h-auto max-w-none scale-125" // Scaling applied here
-              />
-            </div>
-          </div>
-
-        </div>
+<div className="relative z-10 container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 pb-20 pt-20"> 
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    
+    {/* Left Section: Text */}
+    <div className="space-y-4 text-center lg:text-left">
+      <div className="space-y-0">
+        <h1 className="text-[clamp(48px,9vw,130px)] md:text-[clamp(72px,9vw,130px)] font-black leading-[1] tracking-[-1%] text-[#FF531A] mb-0 whitespace-nowrap">
+          Smarter Mobility
+        </h1>
+        <h1 className="text-[clamp(36px,5.5vw,70px)] font-black leading-[1] tracking-[-1%] text-[#FF531A]">
+          for a Better India
+        </h1>
       </div>
+
+        {/* Add Manual Space between these two - hidden on mobile */}
+        <div className="h-0 lg:h-14"></div>
+
+      <p className="text-[clamp(16px,4vw,24px)] text-[#6B0606] max-w-xl mx-auto lg:mx-0 lg:mt-8">
+        <strong>Sustainable Last Mile Transport, Sustainable Livelihoods.</strong>
+      </p>
+      <p className="text-[clamp(14px,3.5vw,18px)] text-[#6B0606] max-w-xl mx-auto lg:mx-0 md:mt-24 lg:mt-40">
+        Last-mile transport doesn't have to be unreliable, expensive, or polluting. Our <strong>electric fleet</strong> keeps people and packages moving - <strong>fast, affordable, and green.</strong> By offering disruptive vehicle uptime and <strong>micro-entrepreneurship</strong> opportunities across <strong>passenger & cargo</strong> mobility.
+      </p>
+      <div className="pt-6 flex justify-center lg:justify-start">
+        <FeatureButtons className="flex-wrap justify-start" setImageSrc={setImageSrc} />
+      </div>
+    </div>
+
+    {/* Right Section: Rickshaw + Person */}
+    <div className="relative flex justify-center w-full"> 
+      <div className="w-full max-w-[1100px] flex justify-center aspect-[11/9] scale-125"> {/* Increased scale from 125 to 150 */}
+        <Image
+          src={imageSrc}
+          alt="Feature Image"
+          width={1100}
+          height={900}
+          className="object-contain w-full h-full max-w-none" 
+          priority
+        />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 
       <svg
         className="absolute bottom-0 left-0 w-screen h-screen"

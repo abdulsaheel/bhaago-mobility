@@ -2,27 +2,27 @@
 
 export default function AboutHero() {
   return (
-    <div className="relative w-screen h-screen bg-[#FEE1B2] flex flex-col items-center justify-center p-4 overflow-hidden pt-20">
+    <div className="relative min-h-[500px] md:h-screen bg-[#FEE1B2] flex flex-col items-center justify-center overflow-hidden pt-20">
       {/* Vertical Gap */}
-      <div className="h-20" />
+      <div className="h-10 md:h-20" />
       <h1 
-        className="text-[8vw] leading-[11vw] text-[#390303] tracking-[-1%] pt-30 text-center font-bold max-w-[90%] absolute z-20" 
-        style={{ fontFamily: 'Georama', transform: 'translateY(-65%)' }}
+        className="text-[2rem] md:text-[8vw] leading-[2.5rem] md:leading-[11vw] text-[#390303] tracking-[-1%] text-center font-bold max-w-[90%] relative md:absolute z-20 mb-8 md:mb-0 md:transform md:-translate-y-[65%]" 
+        style={{ fontFamily: 'Georama' }}
       >
         Built to Last,<br />Built for Impact
       </h1>
-      <img
-        src="/passenger-partner-nobg.png"
-        alt="Overlay Image Left"
-        className="absolute w-auto h-auto max-w-[60vw] max-h-[60vh] object-cover z-30"
-        style={{ left: '0', bottom: '0' }}
-      />
-      <img
-        src="/bhago-van.png"
-        alt="Overlay Image Right"
-        className="absolute w-auto h-auto max-w-[70vw] max-h-[70vh] object-cover z-10"
-        style={{ right: '0', bottom: '0' }}
-      />
+      <div className="flex justify-between items-end w-full md:block px-0">
+        <img
+          src="/passenger-partner-nobg.png"
+          alt="Overlay Image Left"
+          className="w-[45%] max-h-[200px] md:w-auto md:h-auto md:max-w-[60vw] md:max-h-[60vh] object-contain relative md:absolute md:left-0 md:bottom-0 z-30"
+        />
+        <img
+          src="/bhago-van.png"
+          alt="Overlay Image Right"
+          className="w-[45%] max-h-[200px] md:w-auto md:h-auto md:max-w-[70vw] md:max-h-[70vh] object-contain relative md:absolute md:right-0 md:bottom-0 z-10"
+        />
+      </div>
     </div>
   );
 }

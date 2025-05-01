@@ -15,10 +15,11 @@ const FeatureButton = ({ text, isActive, className = "", onClick }: { text: stri
     <button
       onClick={onClick}
       className={`
-      px-3 py-2 sm:px-4 sm:py-3 rounded-full
-      text-xs sm:text-sm md:text-base font-medium
+      px-4 py-2 rounded-full
+      text-sm font-medium
       border-2 transition-colors duration-300
-      whitespace-nowrap min-w-[120px] text-center flex items-center justify-center
+      w-[200px] h-[40px] text-center flex items-center justify-center
+      whitespace-nowrap overflow-hidden
       ${colorClasses}
       ${className}
       `}
@@ -34,7 +35,7 @@ const FeatureButtons = ({ className = "", setImageSrc }: { className?: string; s
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 5000); // Increased interval from 3000ms to 5000ms
 
     return () => clearInterval(interval);
   }, []);
@@ -48,20 +49,17 @@ const FeatureButtons = ({ className = "", setImageSrc }: { className?: string; s
   };
 
   return (
-    <div className={`flex flex-wrap justify-center items-center gap-2 w-full sm:flex-nowrap sm:gap-4 ${className}`}>
+    <div className={`flex flex-wrap justify-center items-center gap-3 w-full sm:flex-nowrap ${className}`}>
       {images.map((item, index) => (
         <FeatureButton
           key={item.key}
           text={item.text}
           isActive={activeIndex === index}
-          className="px-6 py-2.5 sm:px-7 sm:py-3 md:px-8 md:py-3.5 rounded-full text-xs sm:text-sm md:text-base font-medium leading-relaxed border-2 transition-colors duration-300 whitespace-nowrap min-w-[140px] sm:min-w-[180px] md:min-w-[200px] text-center flex items-center justify-center"
           onClick={() => handleButtonClick(index)}
         />
       ))}
     </div>
   );
 };
-
-
 
 export default FeatureButtons;
