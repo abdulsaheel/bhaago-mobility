@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import ContactUs from "@/components/ContactUsButton";
 import '../globals.css'
-import { cn } from "@/lib/utils";
 
 
 export default function Home() {
