@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
           </div>
 
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-[#FF9966] transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/bhagomobility" className="hover:text-[#FF9966] transition-colors" aria-label="Instagram">
               <Instagram size={20} />
             </a>
 

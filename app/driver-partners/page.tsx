@@ -81,6 +81,15 @@ export default function Home() {
               <span className="text-[#ff4102] mr-2">•</span>
               <span><span className="font-semibold">Battery swapping</span> = No downtime = More rides = Higher earnings</span>
               </li>
+              <li className="flex items-start justify-center md:justify-start">
+              <span className="text-[#ff4102] mr-2">•</span>
+              <span>
+                Have questions? Call us at{" "}
+                <a href="tel:8699948432" className="font-semibold underline hover:text-[#ff4102]">
+                86999&nbsp;48432
+                </a>
+              </span>
+              </li>
             </ul>
 
             <div className="mt-10">
