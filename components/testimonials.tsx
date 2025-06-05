@@ -19,7 +19,7 @@ const defaultTestimonials: Testimonial[] = [
     quote: "The thought of owning my own Electric Auto and make it my business is now possible",
     rating: 4.9,
     name: "Ramesh Gowda, Bengaluru",
-    title: "Happy Driver",
+    title: "Driver",
     avatar: "/testimonials/ramesh.png"
   },
   {
@@ -27,7 +27,7 @@ const defaultTestimonials: Testimonial[] = [
     quote: "Owning an EV Delivery vehicle was a dream and Bhago is making it a reality. I have a lot of hope for the future",
     rating: 4.9,
     name: "Lakshmi Patil, Bengaluru",
-    title: "Happy Driver",
+    title: "Driver",
     avatar: "/testimonials/lakshmi.png"
   },
   {
@@ -35,7 +35,7 @@ const defaultTestimonials: Testimonial[] = [
     quote: "No more paying rentals thanks to Bhago's new easy ownership scheme. I can finally make a livelihood and that is freedom!",
     rating: 4.9,
     name: "Ahmed Hussain, Bengaluru",
-    title: "Happy Driver",
+    title: "Driver",
     avatar: "/testimonials/ahmed.png"
   }
 ];
