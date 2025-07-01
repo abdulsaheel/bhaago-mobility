@@ -1,10 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import '../globals.css';
-import ContactUs from "@/components/ContactUsButton";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [statusOpen, setStatusOpen] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Your message has been sent successfully! We'll get back to you shortly.");
+    setStatusOpen(true);
+    setIsOpen(false);
+  };
   return (
     <div className="relative flex flex-col min-h-screen">
       {/* Navbar */}
@@ -90,9 +103,14 @@ export default function Home() {
                 Partner with <strong>Bhago</strong> for a <br/>
                 <span className="text-2xl"><strong>greener</strong> fleet.</span>
               </h3>
+              
+              <button
+                onClick={() => setIsOpen(true)}
+                className="mt-6 inline-block bg-[#ff4102] text-white px-8 py-3 rounded-full font-medium hover:bg-[#ff8332] transition-colors"
+              >
+                Contact Us
+              </button>
             </div>
-            
-            <ContactUs/>
           </div>
         </div>
 
@@ -122,6 +140,110 @@ export default function Home() {
       </main>
       
       <Footer />
+
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="max-w-3xl p-0 overflow-hidden bg-[#FFF3EF] border-none fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-[9999]">
+          <div className="relative px-12 py-16 space-y-6">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 focus:outline-none z-10 bg-transparent border-none cursor-pointer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span className="sr-only">Close</span>
+            </button>
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-1">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    className="w-full px-0 pt-2 pb-1 text-lg bg-transparent border-0 border-b-2 border-[#C4846C] placeholder-[#C4846C] focus:ring-0 focus:border-[#FF5722]"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    className="w-full px-0 pt-2 pb-1 text-lg bg-transparent border-0 border-b-2 border-[#C4846C] placeholder-[#C4846C] focus:ring-0 focus:border-[#FF5722]"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-6 mt-6">
+                <div className="space-y-1">
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    className="w-full px-0 pt-2 pb-1 text-lg bg-transparent border-0 border-b-2 border-[#C4846C] placeholder-[#C4846C] focus:ring-0 focus:border-[#FF5722]"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <input
+                    type="text"
+                    name="location"
+                    placeholder="Location"
+                    className="w-full px-0 pt-2 pb-1 text-lg bg-transparent border-0 border-b-2 border-[#C4846C] placeholder-[#C4846C] focus:ring-0 focus:border-[#FF5722]"
+                  />
+                </div>
+              </div>
+              <div className="space-y-1 mt-6">
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company Name"
+                  className="w-full px-0 pt-2 pb-1 text-lg bg-transparent border-0 border-b-2 border-[#C4846C] placeholder-[#C4846C] focus:ring-0 focus:border-[#FF5722]"
+                />
+              </div>
+              <div className="space-y-1 mt-6">
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  rows={4}
+                  className="w-full px-0 pt-2 pb-1 text-lg bg-transparent border-0 border-b-2 border-[#C4846C] placeholder-[#C4846C] focus:ring-0 focus:border-[#FF5722] resize-none"
+                ></textarea>
+              </div>
+              <div className="flex justify-center pt-8">
+                <button
+                  type="submit"
+                  className="px-16 py-3 text-xl font-semibold text-white bg-[#FF5722] rounded-full hover:bg-[#FF7043] transition-colors duration-200"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={statusOpen} onOpenChange={setStatusOpen}>
+        <DialogContent className="max-w-lg p-8 bg-[#FFF3EF] border-none text-center fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-[9999]">
+          <button
+            onClick={() => setStatusOpen(false)}
+            className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 focus:outline-none z-10 bg-transparent border-none cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span className="sr-only">Close</span>
+          </button>
+          <h2 className="text-xl font-semibold mb-4">{status?.startsWith("Your message") ? "Success!" : "Error"}</h2>
+          <p className="text-lg">{status}</p>
+          <div className="mt-6">
+            <button
+              onClick={() => setStatusOpen(false)}
+              className="px-8 py-2 text-xl font-semibold text-white bg-[#FF5722] rounded-full hover:bg-[#FF7043] transition-colors duration-200"
+            >
+              Close
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
