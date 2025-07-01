@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 
 const ContactUs = ({ className }: { className?: string }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -77,19 +77,17 @@ const ContactUs = ({ className }: { className?: string }) => {
             </button>
 
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="max-w-3xl p-0 overflow-hidden bg-[#FFF3EF] border-none">
-                    {/* Large "CONTACT US" text */}
-                    {/* <div className="absolute top-[-30px] left-0 w-full overflow-hidden text-center">
-                        <h1
-                            className="text-[100px] font-bold text-transparent leading-none tracking-wide"
-                            style={{ WebkitTextStroke: "1px rgba(255, 87, 34, 0.6)" }}
-                        >
-                            CONTACT US
-                        </h1>
-                    </div> */}
-
+                <DialogContent className="max-w-3xl p-0 overflow-hidden bg-[#FFF3EF] border-none relative">
                     {/* Form Content */}
                     <div className="relative z-10 px-12 py-16 space-y-6">
+                        {/* Custom close button */}
+                        <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                            <span className="sr-only">Close</span>
+                        </DialogClose>
                         <form onSubmit={handleSubmit}>
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="space-y-1">
@@ -163,7 +161,15 @@ const ContactUs = ({ className }: { className?: string }) => {
 
             {/* Success/Error Message Dialog */}
             <Dialog open={statusOpen} onOpenChange={setStatusOpen}>
-                <DialogContent className="max-w-lg p-8 bg-[#FFF3EF] border-none text-center">
+                <DialogContent className="max-w-lg p-8 bg-[#FFF3EF] border-none text-center relative">
+                    {/* Custom close button */}
+                    <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span className="sr-only">Close</span>
+                    </DialogClose>
                     <h2 className="text-xl font-semibold mb-4">{status?.startsWith("Your message") ? "Success!" : "Error"}</h2>
                     <p className="text-lg">{status}</p>
                     <div className="mt-6">

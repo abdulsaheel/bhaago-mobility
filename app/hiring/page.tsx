@@ -3,6 +3,7 @@ import AutoScrollingCarousel from "@/components/AutoScrollingCarousel"
 import CoreValuesSection from "@/components/CoreValuesSection"
 import Image from "next/image"
 import Footer from "@/components/footer"
+import HiringFormButton from "@/components/HiringFormButton"
 
 export default function Home() {
   return (
@@ -90,12 +91,7 @@ export default function Home() {
             </h2>
 
             <div className="flex flex-col items-center md:items-end space-y-4">
-              <a
-                href="mailto:hiring.bhago@bhagomobility.com?subject=Job Application - Bhago Mobility&body=Hi Bhago Team,%0D%0A%0D%0AI am interested in exploring opportunities at Bhago Mobility.%0D%0A%0D%0APlease find my resume attached.%0D%0A%0D%0ABest regards"
-                className="bg-[#FF4102] hover:bg-[#d04a25] text-white font-bold py-4 px-8 rounded-full text-xl transition-colors duration-300"
-              >
-                Apply Now
-              </a>
+              <HiringFormButton />
               <p className="text-[#390303] text-sm opacity-75">
                 Or email us directly at{" "}
                 <a 
