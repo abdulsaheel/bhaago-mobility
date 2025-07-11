@@ -7,12 +7,17 @@ interface YouTubePlayerProps {
   className?: string;
 }
 
+// Extend HTMLIFrameElement to include our custom cleanup property
+interface ExtendedHTMLIFrameElement extends HTMLIFrameElement {
+  cleanup?: () => void;
+}
+
 export default function YouTubePlayer({ 
   videoId, 
   title = "YouTube video player",
   className = "py-16 bg-gradient-to-b from-gray-50 to-white"
 }: YouTubePlayerProps) {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const iframeRef = useRef<ExtendedHTMLIFrameElement>(null);
   const [userInteracted, setUserInteracted] = useState(false);
 
   useEffect(() => {
@@ -88,13 +93,13 @@ export default function YouTubePlayer({
       };
 
       // Store cleanup function on iframe for later use
-      (iframe as any).cleanup = cleanup;
+      iframe.cleanup = cleanup;
     }, 2000); // 2 second delay
 
     return () => {
       clearTimeout(timer);
-      if ((iframe as any).cleanup) {
-        (iframe as any).cleanup();
+      if (iframe?.cleanup) {
+        iframe.cleanup();
       }
     };
   }, [userInteracted]);
